@@ -11,6 +11,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.center {
+				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -21,8 +29,8 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/coffee-cup.svg" alt="" /></span><span class="title">Louis Ross</span>
 								</a>
 
 							<!-- Nav -->
@@ -50,54 +58,56 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="../images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h2 id="radio-x-web-scraper">Radio X Web Scraper 📻</h1>
+							<i id="a-web-scraper-that-generates-a-spotify-playlist-based-on-last-played-songs-on-radio-x-">
+								A web scraper that generates a Spotify playlist based on last played songs on Radio X. 
+								<br>Github can be found here: <a href="https://github.com/Rossy167/radio-x">https://github.com/Rossy167/radio-x</a>
+							</i>
+							<hr>
+							<h3>Overview</h3>
+							<p>So, I have a fairly long commute… and over the course of these commutes I noticed I was listening to the same 5 songs over and over. So I switched to the radio, Radio X to be specific. I loved its music choice, but thanks to how money works, I’d traded out listening to the same 5 songs repeat to listening to the same 5 ads on repeat. I swear, radio stations have about 20 minutes of ads for every 2 minutes of song, it’s absurd.</p>
+							<p>I thought it’d be fun to hack together a little piece of software that uses the last played songs on Radio X to create a constantly rolling playlist, avoiding the curse of ads, and the curse of stale music taste. I checked their site, and yep, they do indeed (for now) have a webpage that shows what they’ve been playing.</p>
+							<hr>
+							<h3>How it works</h3>
+							This project allows you to create a Spotify playlist from a static HTML page at a fixed web address. It requests the HTML, parses it into something readable and then makes calls to the Spotify API to generate a playlist. The code itself only needs one command to run (since it was designed to be automated) but on first time setup it will require a Spotify login via oauth to create the .cache file it uses to authenticate.
+							<br><br>
+							<img class="center" src="../images/radio-x-demo1.jpg" alt="radio x demo">
+							<br><br>
+							<P>Once this command is run (the start file is either a .ps1 or a .sh but it can also be ran manually, then the playlist in spotify will be created. If there is a playlist with the name Radio X (Code Generated) already then the script will overwrite that playlist instead. An example of a playlist generated can be seen below.</p>
+							<br>
+							<img class="center" src="../images/radio-x-demo2.jpg" alt="radio x demo">
+							<br>
+							<hr>
+							<h3>My use case</h3>
+							<p>I wrote this script (application? program? the lines are blurred at this point) so that I could have a rolling playlist for when I drive. As such I didn't really want to have to run it manually on a regular basis, seems like a waste of time... plus making random API calls from my work PC didn't seem smart. So I opted to make this a cron job on my Raspberry Pi (which does a few other things) and now I have a playlist on Spotify that updates ever 4 hours, which is the normal length of time of a Radio X host's session.
+							<br>The cron command looked a little bit like this:
+							<br><code>0 */4 * * * $HOME/radio-x start.sh</code>
+							</p>
+							<hr>
+							<h2 id="resources-used">Resources Used</h2>
+							<ul>
+							<li><a href="https://www.radiox.co.uk/radio/last-played-songs/">https://www.radiox.co.uk/radio/last-played-songs/</a></li>
+							<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></li>
+							<li><a href="https://spotipy.readthedocs.io/en/2.12.0/">https://spotipy.readthedocs.io/en/2.12.0/</a></li>
+							<li><a href="https://www.w3schools.com/python/module_requests.asp">https://www.w3schools.com/python/module_requests.asp</a></li>
+							</ul>					
 						</div>
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2>Contact 📞</h2>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/louis-ross-6481b8161/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/rossy167" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://youtube.com/rossy167" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+								<li><a href="mailto:louisross980@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-						</div>
-					</footer>
+						</section>
+					</div>
+				</footer>
 
 			</div>
 
