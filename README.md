@@ -28,3 +28,6 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+https://markdowntohtml.com/
+https://github.com/GaelGirodon/markdown-to-document
