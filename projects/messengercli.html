@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Louis Ross (Steam Blocker Firewall Rule Script)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<style>
+			.center {
+				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+				width: 75%;
+				height: 75%;
+			}
+			img.resize {
+  				max-width:50%;
+  				max-height:50%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/coffee-cup.svg" alt="" /></span><span class="title">Louis Ross</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="index.html">Toggle Dark Mode 🌓</a></li>
+						<li><a href="about.html">About 🍳</a></li>
+						<li><a href="elements.html">Demo Page 💾</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h2 id="steam-blocker-firewall-script">Steam Blocker Firewall Rule Script</h1>
+							<i id="a-web-scraper-that-generates-a-spotify-playlist-based-on-last-played-songs-on-radio-x-">
+								A script that adds a firewall rule to block/unblock Steam so you can use multiple instances of family sharing at the same time.
+								<br>Github can be found here: <a href="https://github.com/Rossy167/steam-blocker">https://github.com/Rossy167/steam-blocker</a>
+							</i>
+							<hr>
+							<h3>Overview</h3>
+							<p>So, Steam has this feature where you can allow your friend to use your games... provided that you, or somebody else isn't using them. The result is that if 3 people want all play Steins;Gate at the same time (which is the exact situation that led to me deciding to create this) that all 3 need to be online on Steam, have Steins;Gate be available (i.e nobody is playing it), then block Steam from accessing the Steam servers and then start up Steins;Gate.</p>
+							<p>This is... a weirdly convoluted process. But basically, the core is: Steam needs to be online, the game needs to be available and then Steam needs be blocked to prevent it making the game unavailable to others or updating to unavailable for you. You cannot just set yourself as offline, as this blocks the family sharing feature.</p>
+							<hr>
+							<h3>How it works</h3>
+							<p>The script itself is fairly basic, it just adds a firewall rule to block Steam, and a deletes that rule on command. The rule is pretty wide sweeping, and just blocks all Steam related activities on the device doing something like this for each of Steam's various .exes:</p>
+							<code>New-NetFirewallRule -Action block -Program 'C:\Program Files (x86)\Common Files\Steam\SteamService.exe'</code>
+							<br><br>
+							<p>The scripts can be ran from a .ps1 file, but a much better method for doing it is adding the functions to your Powershell profile with the Save-BlockSteamToProfile.ps1 script and then running it adhoc as and when needed. The actual implementation of this script is so incredibly basic it's barely worth showing:</p>
+							<img class="center" src="../images/block-steam-demo-1.jpg" alt="steam blocker demo">
+							<br>
+							<P>I also wanted this to be usable by my (relatively) not so tech savvy friends so I made a quick UI version using C# WPF, the window that this .exe creates is a simple form that has a Block Steam and Unblock Steam button, and it just invokes the Powershell code according to which button you press. We ran into some hiccups during installation, I used an .msi creator extension to make it a bit simpler:</p>
+							<img class="resize" src="../images/steam-blocker-demo-2.jpg" alt="steam blocker demo 2">
+							<br>
+							<p>After the setup, it should be pathed on your Windows device making it really easy to access. It will prompt for Admin to open (since it's modifying firewall rules) and then open to this simple Window:</p>
+							<img class="resize" src="../images/block-steam-demo-3.jpg" alt="steam blocker demo 3">
+							<br>
+							<p>The buttons will just invoke the same Powershell code as the functions I wrote for the .ps1s, which in C# looks a bit like this:</p>
+							<code>using (Process cmd = new Process())</code><br>
+							<code>{</code><br>
+							<code>cmd.StartInfo.FileName = "cmd.exe";</code><br>
+							<code>some more basic object setup</code><br>
+							<code>cmd.StandardInput.WriteLine("powershell -command " + command);</code>
+							<br><br><p>In this function, command was equal to the command I wanted to run in Powershell. For example:</p>
+							<code>New-NetFirewallRule -Action block -Program 'C:\\Program Files (x86)\\Common Files\\Steam\\SteamService.exe' etc</code><br><br>
+							<p>The reasoning for using starting cmd.exe and then piping the commands into the Powershell.exe was permissions. There's many advanced ways to invoke Powershell from C#/.NET Framework but this is the quickest and easiest (and also probably least secure) way to pipe the same permissions as the application into the Shell you need.</p>
+							<p>The resultant Steam page will look a bit like this, but at least those family sharing games will now be playable without preventing someone else from also playing them:</p>
+							<img class="resize" src="../images/block-steam-demo-4.jpg" alt="steam blocker demo 4">
+							<br>
+							<hr>
+							<h3>My use case</h3>
+							<p>So funnily enough this remains one of the most used little scripts I've ever written. I constantly make use of my friend's Steam library (he has money...) so I often block Steam in order so I can play his games without preventing him from playing his games too.
+							The UI version didn't really take off, but that's cool, because the reality is that if 2 people are playing at the same time, only one needs to use this. And it's rare for 3 people to be using it, but it happens, and they come to me, and I show them what to do.</p>
+							<p>Me personally, I have the functions in my $PROFILE so that I can just open a Powershell window and fire off the commands at will. They remain some of the most used functions in my $PROFILE. I find this far quicker than using the UI, or going to the directory where I store the .ps1 scripts.</p>
+							<p>Just fire off <code>Block-Steam</code> and you're good to go.</p>
+							<hr>
+							<h2 id="resources-used">Resources Used</h2>
+							<ul>
+							<li><a href="https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5">https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5</a></li>
+							<li><a href="https://docs.microsoft.com/en-us/powershell/module/netsecurity/new-netfirewallrule?view=win10-ps">https://docs.microsoft.com/en-us/powershell/module/netsecurity/new-netfirewallrule?view=win10-ps</a></li>
+							</ul>					
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2>Contact 📞</h2>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/louis-ross-6481b8161/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/rossy167" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://youtube.com/rossy167" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+								<li><a href="mailto:louisross980@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</section>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
