@@ -373,6 +373,50 @@
   .project-card .ph-label{ font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
   .project-card p{ margin: 10px 0 0; font-size: 14px; color: var(--text-muted); }
 
+  .project-card.filled{
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--teal);
+    color: var(--text);
+  }
+  .project-card.filled h3{
+    font-family: var(--mono);
+    font-size: 15px;
+    margin: 0;
+    color: var(--text);
+  }
+  .project-card.filled .lang{
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    margin: 4px 0 0;
+  }
+  .project-card.filled p.desc{
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 12px 0 0;
+    flex-grow: 1;
+  }
+  .project-card .meta-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .project-card .stats{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    display: flex;
+    gap: 12px;
+  }
+  .project-card .stats span{ color: var(--text-muted); }
+  .project-card .repo-link{
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
   /* ---------- CONTACT ---------- */
   .contact-grid{
     display:flex; flex-wrap:wrap; gap: 36px; align-items:flex-start;
@@ -636,19 +680,35 @@
     <div class="section-head">
       <p class="tag">// projects</p>
       <h2>Currently deploying</h2>
-      <p>This section is being built out with real, working projects — automation tools, infrastructure-as-code templates, and security tooling. Check back soon.</p>
+      <p>Automation tools and infrastructure scripts I actually run day to day. More on the way.</p>
     </div>
     <div class="projects-grid">
-      <div class="project-card">
+      <div class="project-card filled">
         <div>
-          <span class="ph-label">● pending</span>
-          <p>Project slot 01 — reserved</p>
+          <h3>steam-blocker</h3>
+          <p class="lang">C#</p>
+          <p class="desc">A lightweight Windows utility that blocks Steam's network access via Windows Firewall rules, letting multiple people use Family Sharing offline on the same network at the same time.</p>
+        </div>
+        <div class="meta-row">
+          <div class="stats">
+            <span>★ 28</span>
+            <span>⑂ 1</span>
+          </div>
+          <a class="repo-link" href="https://github.com/rossy167/steam-blocker" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card filled">
         <div>
-          <span class="ph-label">● pending</span>
-          <p>Project slot 02 — reserved</p>
+          <h3>win10-setup-script</h3>
+          <p class="lang">PowerShell</p>
+          <p class="desc">A repeatable PowerShell build script for provisioning a clean Windows 10 install — debloating, privacy hardening, and standard tooling installs, in one run instead of a dozen manual steps.</p>
+        </div>
+        <div class="meta-row">
+          <div class="stats">
+            <span>★ 3</span>
+            <span>⑂ 2</span>
+          </div>
+          <a class="repo-link" href="https://github.com/rossy167/win10-setup-script" target="_blank" rel="noopener">View on GitHub</a>
         </div>
       </div>
       <div class="project-card">
