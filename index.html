@@ -1,128 +1,781 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Louis Ross</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload" onload="blinktext();">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Louis Ross — Systems Administrator | Cloud &amp; Infrastructure Engineer</title>
+<meta name="description" content="Louis Ross — Systems Administrator with 5+ years administering Azure, AWS and Entra ID (Azure AD) environments. Experience in IAM, endpoint management (MDM), automation, and ISO 27001 / Cyber Essentials compliance.">
+<meta name="keywords" content="Systems Administrator, IT Infrastructure Engineer, Cloud Infrastructure Engineer, Cloud Support Engineer, Identity and Access Management, IAM Analyst, Endpoint Management Engineer, DevOps Engineer, IT Operations, 3rd Line Support, Azure, AWS, Entra ID, Azure AD">
+<link rel="canonical" href="https://rossy167.github.io/">
+<meta property="og:url" content="https://rossy167.github.io/">
+<meta property="og:title" content="Louis Ross — Systems Administrator | Cloud &amp; Infrastructure Engineer">
+<meta property="og:description" content="Systems Administrator with 5+ years across Azure, AWS, Entra ID, endpoint management, automation and security compliance.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Louis Ross — Systems Administrator | Cloud &amp; Infrastructure Engineer">
+<meta name="twitter:description" content="Systems Administrator with 5+ years across Azure, AWS, Entra ID, endpoint management, automation and security compliance.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0F14;
+    --surface: #121821;
+    --surface-2: #182029;
+    --border: #232C38;
+    --text: #E6EAF0;
+    --text-muted: #98A4B3;
+    --text-faint: #6B7889;
+    --amber: #E3A857;
+    --teal: #4FBFAD;
+    --red: #E2665A;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --maxw: 1080px;
+    --radius: 3px;
+  }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/coffee-cup.svg" alt="" /></span><span class="title">Louis Ross</span>
-								</a>
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+  a{ color: var(--teal); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
 
-						</div>
-					</header>
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="../elements.html">Demo Page 💾</a></li>
-							<li><a href="../about.html">About 🍳</a></li>
-						</ul>
-					</nav>
+  .mono{ font-family: var(--mono); }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<div>
-									<h2>IT Support Analyst and automation enthusiast<span id="blink">_</span></h2>
-								</div>
-								<script type="text/javascript">
-									var blink = document.getElementById('blink');
-									setInterval(function() {
-										blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-									}, 800);
-								</script>
-								<p>Hi, I'm Louis Ross, an IT Support Analyst and Computer Science graduate from the University of Hertfordshire. 🎓 </p>
-								<p>My time in IT Support has given me valuable experience communicating and supporting an IT knowledge base to non-technical staff. I have direct experience with a vast number of modern industry IT systems and methodologies. I also maintain (and regularly extend) our support team's repository of script modules, written primarily in PowerShell with some Bash and Python. 🐍</p>
-								<p>I also build, repair and service PCs and Apple devices. You can check out some of my work and contact me <a href="pc-services.html" target="_blank">here</a>.</p>
-							</header>
-							<hr>
-							<h2>Projects 💻</h2>
-							<p>In my spare time I often enjoy making some small personal projects, they will usually be posted on my <a href="http://GitHub.com/rossy167/" target="_blank">GitHub</a> and posted here. Some projects might not be GitHub..able but I'll always post them with an acompanying article talking about how they work, my experience making them, how they're hosted etc etc.</p>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/radiox.jpg" alt="radio x"/>
-									</span>
-									<a href="projects/radiox.html">
-										<h2>radio-x</h2>
-										<div class="content">
-											<p>Web Scraper that generates a Spotify playlist based on last played songs on Radio X.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/steam.jpg" alt="steam blocker" />
-									</span>
-									<a href="projects/steamblocker.html">
-										<h2>steam-blocker</h2>
-										<div class="content">
-											<p>Stop Steam connecting to the internet so everyone can use Family Sharing at the same time</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Veroeros</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
-				<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<section>
-							<h2>Contact 📞</h2>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/louis-ross-6481b8161/" target="_blank" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/rossy167" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://youtube.com/rossy167" target="_blank" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
-								<li><a href="mailto:louisross980@gmail.com" target="_blank" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</section>
-					</div>
-				</footer>
-			</div>
+  /* ---------- NAV ---------- */
+  header.site{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(11,15,20,0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  .navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 16px 28px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .navbar .brand{
+    font-family: var(--mono);
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+  .navbar .brand .dot{ color: var(--teal); }
+  .navlinks{
+    display:flex;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: 13.5px;
+  }
+  .navlinks a{ color: var(--text-muted); }
+  .navlinks a:hover{ color: var(--text); text-decoration: none; }
+  .navlinks{ display:none; }
+  @media (min-width: 720px){ .navlinks{ display:flex; } }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  .skip-link{
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--amber);
+    color: #17110A;
+    padding: 10px 16px;
+    font-family: var(--mono);
+    font-size: 13px;
+    z-index: 100;
+    border-radius: 0 0 var(--radius) 0;
+  }
+  .skip-link:focus{ left: 0; }
 
-	</body>
+  .nav-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    cursor: pointer;
+  }
+  @media (min-width: 720px){ .nav-toggle{ display:none; } }
+  .nav-toggle .bar{ display:block; width:16px; height:1px; background: var(--text); position:relative; }
+  .nav-toggle .bar::before, .nav-toggle .bar::after{
+    content:''; position:absolute; left:0; width:16px; height:1px; background: var(--text);
+  }
+  .nav-toggle .bar::before{ top:-5px; }
+  .nav-toggle .bar::after{ top:5px; }
+
+  .mobile-menu{
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .mobile-menu.open{ display: flex; }
+  .mobile-menu a{
+    padding: 14px 28px;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-menu a:hover{ color: var(--text); text-decoration:none; }
+  @media (min-width: 720px){ .mobile-menu{ display:none !important; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 64px 0 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+  @media (min-width: 860px){
+    .hero-grid{ grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
+  }
+  .hero .kicker{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--teal);
+    margin: 0 0 14px;
+  }
+  .hero h1{
+    font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+    line-height: 1.12;
+    margin: 0 0 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .hero p.lede{
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 46ch;
+    margin: 0 0 28px;
+  }
+  .hero .cta-row{ display:flex; gap: 14px; flex-wrap: wrap; }
+  .btn{
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    color: var(--text);
+    display:inline-block;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .btn:hover{ text-decoration:none; border-color: var(--text-faint); }
+  .btn.primary{
+    background: var(--amber);
+    border-color: var(--amber);
+    color: #17110A;
+    font-weight: 600;
+  }
+  .btn.primary:hover{ background: #eeb96c; border-color: #eeb96c; }
+
+  .hero-meta{
+    display:flex;
+    gap: 10px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 5px 10px;
+  }
+  .hero-meta span.pending{
+    border-style: dashed;
+    color: var(--text-faint);
+  }
+
+  /* Terminal panel */
+  .panel{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .panel-head{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding: 10px 14px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .panel-head .lights{ display:flex; gap:6px; }
+  .panel-head .lights i{ width:9px; height:9px; border-radius:50%; background:#2A3341; display:block; }
+  .panel-body{
+    padding: 18px 16px 20px;
+    font-family: var(--mono);
+    font-size: 13.5px;
+    color: var(--text-muted);
+    min-height: 210px;
+  }
+  .panel-body .ln{ margin: 0 0 8px; white-space: pre-wrap; }
+  .panel-body .prompt{ color: var(--teal); }
+  .panel-body .ok{ color: var(--teal); }
+  .panel-body .cursor{
+    display:inline-block; width:7px; height:14px; background: var(--amber);
+    margin-left:2px; vertical-align:-2px;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{ padding: 64px 0; border-bottom: 1px solid var(--border); }
+  .section-head{ margin-bottom: 34px; }
+  .section-head .tag{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--teal);
+    margin: 0 0 8px;
+  }
+  .section-head h2{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    font-weight: 700;
+  }
+  .section-head p{
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin: 12px 0 0;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-body{ max-width: 68ch; color: var(--text-muted); font-size: 16.5px; }
+  .about-body p{ margin: 0 0 16px; }
+  .about-body strong{ color: var(--text); font-weight: 600; }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 640px){ .skills-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px){ .skills-grid{ grid-template-columns: 1fr 1fr 1fr; } }
+  .skill-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+  }
+  .skill-card h3{
+    font-family: var(--mono);
+    font-size: 14px;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  .skill-card .status{
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--teal);
+    margin: 0 0 12px;
+  }
+  .skill-card ul{ margin:0; padding-left: 18px; color: var(--text-muted); font-size: 14px; }
+  .skill-card li{ margin-bottom: 4px; }
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{ position: relative; padding-left: 28px; }
+  .timeline::before{
+    content:'';
+    position:absolute; left:5px; top:6px; bottom:6px; width:1px;
+    background: var(--border);
+  }
+  .role{ position: relative; margin-bottom: 44px; }
+  .role:last-child{ margin-bottom: 0; }
+  .role::before{
+    content:'';
+    position:absolute; left:-28px; top:4px;
+    width:11px; height:11px; border-radius:50%;
+    background: var(--bg); border: 2px solid var(--teal);
+  }
+  .role-head{
+    display:flex; flex-wrap:wrap; align-items:baseline; gap: 8px 14px;
+    margin-bottom: 4px;
+  }
+  .role-head h3{ margin:0; font-size: 18px; font-weight:700; }
+  .role-head .company{ color: var(--teal); font-family: var(--mono); font-size: 14px; }
+  .role-head .dates{ color: var(--text-faint); font-family: var(--mono); font-size: 13px; margin-left:auto; }
+  .role ul{ margin: 12px 0 0; padding-left: 20px; color: var(--text-muted); }
+  .role li{ margin-bottom: 8px; }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid; grid-template-columns: 1fr; gap: 14px;
+  }
+  @media (min-width: 640px){ .services-grid{ grid-template-columns: 1fr 1fr; } }
+  .service-card{
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    background: var(--surface);
+  }
+  .service-card h3{ margin: 0 0 8px; font-size: 16px; }
+  .service-card p{ margin:0; color: var(--text-muted); font-size: 14.5px; }
+  .service-card .idx{ font-family: var(--mono); font-size: 12px; color: var(--text-faint); display:block; margin-bottom: 8px; }
+
+  /* ---------- PROJECTS ---------- */
+  .projects-grid{
+    display:grid; grid-template-columns: 1fr; gap: 14px;
+  }
+  @media (min-width: 640px){ .projects-grid{ grid-template-columns: repeat(3, 1fr); } }
+  .project-card{
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 22px 18px;
+    min-height: 150px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    color: var(--text-faint);
+  }
+  .project-card .ph-label{ font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+  .project-card p{ margin: 10px 0 0; font-size: 14px; color: var(--text-muted); }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:flex; flex-wrap:wrap; gap: 36px; align-items:flex-start;
+  }
+  .contact-list{ font-family: var(--mono); font-size: 15px; }
+  .contact-list div{ margin-bottom: 10px; color: var(--text-muted); }
+  .contact-list span{ color: var(--text-faint); display:inline-block; width: 90px; }
+
+  footer{
+    padding: 28px 0 40px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="navbar">
+    <div class="brand">louis<span class="dot">.</span>ross</div>
+    <nav class="navlinks">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#experience">experience</a>
+      <a href="#services">services</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span class="bar"></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#about">about</a>
+    <a href="#skills">skills</a>
+    <a href="#experience">experience</a>
+    <a href="#services">services</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">systems administrator — cloud &amp; infrastructure</p>
+      <h1>I keep infrastructure running, secure, and out of your way.</h1>
+      <p class="lede">5+ years administering cloud, identity, and endpoint environments for SaaS and enterprise teams — the person you call before something breaks, and the one who made sure it didn't.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="Louis_Ross_CV.pdf" download>Download CV</a>
+      </div>
+      <div class="hero-meta">
+        <span>5+ years experience</span>
+        <span>United Kingdom</span>
+        <span>Azure</span>
+        <span>AWS</span>
+        <span>Entra ID</span>
+        <span>BSc Computer Science</span>
+        <span class="pending">AZ-104 — in progress</span>
+      </div>
+    </div>
+
+    <div class="panel" aria-hidden="true">
+      <div class="panel-head">
+        <div class="lights"><i></i><i></i><i></i></div>
+        <span>status.sh</span>
+      </div>
+      <div class="panel-body" id="termBody"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// about</p>
+      <h2>Background</h2>
+    </div>
+    <div class="about-body">
+      <p>I'm Louis, a <strong>systems administrator</strong> with over five years supporting and administering Azure and AWS environments across SaaS and enterprise settings. My work spans <strong>identity and access management</strong>, <strong>endpoint management</strong>, <strong>infrastructure automation</strong>, <strong>security and compliance</strong>, and day-to-day operational monitoring.</p>
+      <p>I script across <strong>PowerShell, Python, and Bash</strong> to cut down manual admin work and keep operations reliable, and I hold a BSc in Computer Science from the University of Hertfordshire. I'm currently studying for the <strong>Microsoft Certified: Azure Administrator Associate (AZ-104)</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// skills</p>
+      <h2>Systems status</h2>
+      <p>The platforms, tools, and disciplines I work in day to day.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Cloud Platforms</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>Microsoft Azure — IaaS/PaaS, VMs, networking, storage, App Services</li>
+          <li>AWS — EC2, VPC, S3, IAM</li>
+          <li>GCP &amp; hybrid cloud environments</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Identity &amp; Access</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>Entra ID / Azure AD, Active Directory, Okta</li>
+          <li>RBAC, conditional access, MFA, SCIM provisioning</li>
+          <li>Access control policy &amp; identity lifecycle management</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Endpoint Management</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>Microsoft Intune, Autopilot, SCCM</li>
+          <li>Jamf, Samsung Knox, ChromeOS, Google Workspace</li>
+          <li>Windows Server, DNS, DHCP, Group Policy</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Automation &amp; Scripting</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>PowerShell, Python, Bash, Node.js</li>
+          <li>Provisioning, diagnostics, operational tooling</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Monitoring &amp; Incident</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>Prometheus, Grafana, New Relic, CloudWatch</li>
+          <li>Alerting pipelines, 24/7 on-call, SLA-driven ops</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Security &amp; Compliance</h3>
+        <p class="status">● operational</p>
+        <ul>
+          <li>ISO 27001, Cyber Essentials</li>
+          <li>Vulnerability management, pen-test coordination</li>
+          <li>Simulated phishing &amp; security awareness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// experience</p>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="role">
+        <div class="role-head">
+          <h3>System Administrator</h3>
+          <span class="company">Inspiro Learning</span>
+          <span class="dates">Jul 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Administer and maintain Azure cloud infrastructure across a distributed enterprise environment, managing security posture, governance controls, and platform improvements alongside an external MSP.</li>
+          <li>Manage Entra ID for the full identity lifecycle: user and group provisioning, conditional access policies, RBAC, MFA enforcement, and SCIM-based SSO integrations.</li>
+          <li>Contribute to ISO 27001 and Cyber Essentials compliance, supporting evidence packs, control mapping, and audit readiness.</li>
+          <li>Develop PowerShell automation scripts for provisioning, diagnostics, and operational reporting.</li>
+          <li>Manage Intune and Autopilot for Windows device fleet management; administer Samsung Knox for Android devices; coordinate Windows 11 enterprise migration.</li>
+          <li>Maintain technical documentation and runbooks for infrastructure processes and stakeholder handoffs.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <h3>System Administrator</h3>
+          <span class="company">Bob's Business Limited</span>
+          <span class="dates">Jun 2022 – Apr 2024</span>
+        </div>
+        <ul>
+          <li>Managed AWS cloud infrastructure (EC2, VPC, S3, IAM) as the primary cloud platform for a cybersecurity SaaS business, maintaining reliability, security, and performance across production environments.</li>
+          <li>Used Terraform for infrastructure-as-code deployments across development, staging, and production environments.</li>
+          <li>Implemented monitoring and alerting using Prometheus, Grafana, and New Relic; participated in 24/7 on-call support, resolving critical incidents within SLA.</li>
+          <li>Contributed to ISO 27001 and Cyber Essentials compliance; provided 3rd line technical support across infrastructure, identity, and access control.</li>
+          <li>Administered Jamf for macOS and iPad device management; managed ChromeOS and Google Workspace.</li>
+          <li>Developed Python and Node.js automation scripts in production for incident response and operational workflows.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <h3>IT Support Analyst</h3>
+          <span class="company">Utility Warehouse (Telecom Plus PLC)</span>
+          <span class="dates">Jun 2018 – Nov 2021</span>
+        </div>
+        <ul>
+          <li>Administered Active Directory, SCCM, and Jamf across a 1,500+ user enterprise estate; managed DNS, DHCP, Group Policy, Hyper-V, and Windows Server environments.</li>
+          <li>Administered Okta for identity and access management across permissions and devices.</li>
+          <li>Developed PowerShell automation scripts to reduce manual administration overhead.</li>
+          <li>Supported AWS infrastructure migration using Terraform and Desired State Configuration (DSC).</li>
+          <li>Delivered Tier 1 and Tier 2 support across hardware, software, and connectivity issues.</li>
+          <li>Worked within ServiceNow and Jira for incident management, queue administration, and escalation tracking.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// services</p>
+      <h2>What I can take off your plate</h2>
+      <p>Focused engagements for small teams and businesses that need infrastructure handled properly without a full-time hire.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="idx">cloud</span>
+        <h3>Cloud infrastructure setup &amp; administration</h3>
+        <p>Azure and AWS environments built, migrated, or taken over and stabilised — networking, storage, compute, and ongoing administration.</p>
+      </div>
+      <div class="service-card">
+        <span class="idx">identity</span>
+        <h3>Identity &amp; access management (IAM)</h3>
+        <p>Entra ID, Active Directory, and Okta setup and hardening — conditional access, MFA enforcement, RBAC, and SSO integrations.</p>
+      </div>
+      <div class="service-card">
+        <span class="idx">endpoint</span>
+        <h3>Endpoint fleet management (MDM)</h3>
+        <p>Intune, Autopilot, Jamf, and Knox deployments for Windows, macOS, and mobile fleets — enrolment, policy, and device lifecycle.</p>
+      </div>
+      <div class="service-card">
+        <span class="idx">security</span>
+        <h3>Security &amp; compliance support</h3>
+        <p>ISO 27001 and Cyber Essentials readiness, vulnerability management, pen-test coordination, and phishing-simulation programmes.</p>
+      </div>
+      <div class="service-card">
+        <span class="idx">automation</span>
+        <h3>Automation &amp; scripting</h3>
+        <p>PowerShell, Python, and Bash tooling to remove repetitive admin work — provisioning, diagnostics, and reporting.</p>
+      </div>
+      <div class="service-card">
+        <span class="idx">audit</span>
+        <h3>IT systems audit &amp; documentation</h3>
+        <p>A clear-eyed review of your current setup, with runbooks and documentation your team can actually use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// projects</p>
+      <h2>Currently deploying</h2>
+      <p>This section is being built out with real, working projects — automation tools, infrastructure-as-code templates, and security tooling. Check back soon.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div>
+          <span class="ph-label">● pending</span>
+          <p>Project slot 01 — reserved</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div>
+          <span class="ph-label">● pending</span>
+          <p>Project slot 02 — reserved</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div>
+          <span class="ph-label">● pending</span>
+          <p>Project slot 03 — reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="tag">// contact</p>
+      <h2>Let's talk</h2>
+      <p>Open to full-time roles, contract work, and freelance engagements.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list">
+        <div><span>email</span> <a href="mailto:louisross980@gmail.com">louisross980@gmail.com</a></div>
+        <div><span>phone</span> (+44) 07592 760393</div>
+        <div><span>location</span> United Kingdom</div>
+        <div><span>linkedin</span> <a href="https://www.linkedin.com/in/louis-ross/" target="_blank" rel="noopener">linkedin.com/in/louis-ross</a></div>
+        <div><span>github</span> <a href="https://github.com/rossy167" target="_blank" rel="noopener">github.com/rossy167</a></div>
+        <div><span>status</span> Currently employed — open to new opportunities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>© 2026 Louis Ross</span>
+    <span>Built with HTML, CSS &amp; JS</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', function(){
+    var isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+})();
+
+(function(){
+  var body = document.getElementById('termBody');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var lines = [
+    {t:'root@louis-ross:~$ ', p:true, cmd:'./check-status.sh'},
+    {t:'checking core services...'},
+    {t:'svc: azure-infra      ', ok:true},
+    {t:'svc: entra-id         ', ok:true},
+    {t:'svc: endpoint-mgmt    ', ok:true},
+    {t:'svc: automation       ', ok:true},
+    {t:'svc: monitoring       ', ok:true},
+    {t:'svc: sec-compliance   ', ok:true},
+    {t:'', done:true}
+  ];
+
+  function render(){
+    body.innerHTML = '';
+    lines.forEach(function(l){
+      var div = document.createElement('div');
+      div.className = 'ln';
+      if(l.p){
+        div.innerHTML = '<span class="prompt">'+l.t+'</span>'+l.cmd;
+      } else if(l.ok){
+        div.innerHTML = l.t + '<span class="ok">[ OK ]</span>';
+      } else if(!l.done){
+        div.textContent = l.t;
+      }
+      if(!l.done) body.appendChild(div);
+    });
+    var cursorLine = document.createElement('div');
+    cursorLine.className = 'ln';
+    cursorLine.innerHTML = '<span class="prompt">root@louis-ross:~$</span> <span class="cursor"></span>';
+    body.appendChild(cursorLine);
+  }
+
+  if(reduce){
+    render();
+    return;
+  }
+
+  var i = 0;
+  function step(){
+    if(i >= lines.length){ return; }
+    var l = lines[i];
+    var div = document.createElement('div');
+    div.className = 'ln';
+    if(l.p){
+      div.innerHTML = '<span class="prompt">'+l.t+'</span>'+l.cmd;
+    } else if(l.ok){
+      div.innerHTML = l.t + '<span class="ok">[ OK ]</span>';
+    } else if(!l.done){
+      div.textContent = l.t;
+    }
+    if(!l.done){ body.appendChild(div); }
+    i++;
+    if(i < lines.length){
+      setTimeout(step, l.p ? 500 : 220);
+    } else {
+      var cursorLine = document.createElement('div');
+      cursorLine.className = 'ln';
+      cursorLine.innerHTML = '<span class="prompt">root@louis-ross:~$</span> <span class="cursor"></span>';
+      body.appendChild(cursorLine);
+    }
+  }
+  step();
+})();
+</script>
+
+</body>
 </html>
