@@ -687,7 +687,7 @@
         <div>
           <h3>cloud-monitoring-stack</h3>
           <p class="lang">Terraform / Docker / Grafana</p>
-          <p class="desc">A self-hosted Prometheus + Grafana observability stack on GCP, provisioned entirely by Terraform — one apply brings up the VM, networking, and full monitoring stack with zero manual SSH steps. It even watches this site's own uptime and TLS cert.</p>
+          <p class="desc">A self-hosted Prometheus + Grafana stack on a free-tier GCP e2-micro, provisioned entirely by Terraform with GCS-backed remote state. Alertmanager routes real alert rules — host resource pressure, probe failures, container restarts — to a configurable webhook; per-container memory limits and a tuned swapfile keep it stable inside 1GB of RAM. It also watches this site's own uptime and TLS cert.</p>
         </div>
         <div class="meta-row">
           <a class="repo-link" href="https://github.com/rossy167/cloud-monitoring-stack" target="_blank" rel="noopener">View on GitHub</a>
