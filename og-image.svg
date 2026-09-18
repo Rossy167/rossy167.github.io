@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .kicker { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 24px; fill: #4FBFAD; }
+      .name { font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif; font-size: 72px; font-weight: 700; fill: #E6EAF0; }
+      .role { font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif; font-size: 32px; font-weight: 500; fill: #98A4B3; }
+      .brand { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 22px; fill: #6B7889; }
+      .brand tspan.dot { fill: #4FBFAD; }
+      .tag { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 18px; fill: #6B7889; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="#0B0F14"/>
+
+  <!-- outer terminal-style frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="6" fill="#121821" stroke="#232C38" stroke-width="1"/>
+
+  <!-- panel head / traffic lights -->
+  <rect x="40" y="40" width="1120" height="52" rx="6" fill="#182029" stroke="#232C38" stroke-width="1"/>
+  <circle cx="72" cy="66" r="6" fill="#2A3341"/>
+  <circle cx="94" cy="66" r="6" fill="#2A3341"/>
+  <circle cx="116" cy="66" r="6" fill="#2A3341"/>
+  <text x="1108" y="72" text-anchor="end" class="tag">profile.sh</text>
+
+  <!-- kicker -->
+  <text x="96" y="230" class="kicker">// systems administrator — cloud &amp; infrastructure</text>
+
+  <!-- name -->
+  <text x="92" y="330" class="name">Louis Ross</text>
+
+  <!-- role -->
+  <text x="96" y="384" class="role">Cloud &amp; Infrastructure Engineer</text>
+
+  <!-- accent rule -->
+  <rect x="96" y="420" width="120" height="4" fill="#E3A857"/>
+
+  <!-- meta chips -->
+  <g font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="18" fill="#98A4B3">
+    <rect x="96" y="454" width="150" height="34" rx="3" fill="none" stroke="#232C38"/>
+    <text x="171" y="477" text-anchor="middle">Azure</text>
+
+    <rect x="258" y="454" width="140" height="34" rx="3" fill="none" stroke="#232C38"/>
+    <text x="328" y="477" text-anchor="middle">AWS</text>
+
+    <rect x="410" y="454" width="180" height="34" rx="3" fill="none" stroke="#232C38"/>
+    <text x="500" y="477" text-anchor="middle">Entra ID</text>
+
+    <rect x="602" y="454" width="230" height="34" rx="3" fill="none" stroke="#232C38"/>
+    <text x="717" y="477" text-anchor="middle">5+ years experience</text>
+  </g>
+
+  <!-- brand mark -->
+  <text x="96" y="548" class="brand">louis<tspan class="dot">.</tspan>ross</text>
+  <text x="1108" y="548" text-anchor="end" class="brand">rossy167.github.io</text>
+</svg>

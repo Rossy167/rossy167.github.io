@@ -1,0 +1,9 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "long-title": "off",
+    "unique-landmark": "off",
+    "no-implicit-button-type": "off",
+    "no-inline-style": "off"
+  }
+}
