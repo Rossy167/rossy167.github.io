@@ -1,0 +1,12 @@
+{
+  "name": "rossy167-github-io",
+  "private": true,
+  "type": "module",
+  "description": "Static portfolio site. package.json exists only to pin Playwright for build-cv-pdf.mjs.",
+  "scripts": {
+    "build:cv": "node build-cv-pdf.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
