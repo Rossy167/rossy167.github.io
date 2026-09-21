@@ -61,6 +61,13 @@ A self-hosted Prometheus + Grafana stack on a free-tier GCP e2-micro, provisione
 
 GitHub: github.com/rossy167/cloud-monitoring-stack
 
+### aws-python-toolkit
+*Python / boto3 / pytest + moto*
+
+A CLI for two things a cloud/DevOps engineer is asked to do constantly: find IAM permissions that are broader than they need to be, and see what's actually running across an AWS account. iam-audit walks every IAM user, role, and group, reading their policy documents to flag Allow statements with a wildcard action or resource; inventory lists EC2, RDS, and S3 resources across one or more regions along with their state. The full test suite runs against moto's mocked AWS backends, so it needs zero real credentials and costs nothing to run, and GitHub Actions runs ruff, mypy, and pytest on every push.
+
+GitHub: github.com/Rossy167/aws-python-toolkit
+
 ### k3s-observability-lab
 *Kubernetes / kind / GitHub Actions*
 
